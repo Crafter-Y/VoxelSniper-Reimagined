@@ -1016,14 +1016,14 @@ public class VoxelMaterial implements IMaterial {
                 return null;
             }
         }
-        if (VoxelSniper.voxelsniper.getVersion().isSupported(block.getVersion())) {
+        if (VoxelSniper.voxelsniper.getMinecraftVersion().isSupported(block.getVersion())) {
             return block;
         }
         return null;
     }
 
     public static Collection<VoxelMaterial> getMaterials() {
-        return BLOCKS.values().stream().filter((m) -> VoxelSniper.voxelsniper.getVersion().isSupported(m.getVersion())).toList();
+        return BLOCKS.values().stream().filter((m) -> VoxelSniper.voxelsniper.getMinecraftVersion().isSupported(m.getVersion())).toList();
     }
 
     @Override

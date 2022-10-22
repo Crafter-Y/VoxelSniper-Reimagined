@@ -15,7 +15,7 @@ public class VoxelBiomeTest extends TestCase {
     protected void setUp() throws Exception {
         super.setUp();
         var main = Mockito.mock(IVoxelsniper.class);
-        Mockito.when(main.getVersion()).thenReturn(Version.V1_16);
+        Mockito.when(main.getMinecraftVersion()).thenReturn(Version.V1_16);
         VoxelSniper.voxelsniper = main;
         this.biome = new VoxelBiome("namespace", "key", Version.V1_16);
     }

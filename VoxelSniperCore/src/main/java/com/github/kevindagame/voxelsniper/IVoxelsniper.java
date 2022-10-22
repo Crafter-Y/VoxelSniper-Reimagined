@@ -21,7 +21,8 @@ public interface IVoxelsniper {
 
     Environment getEnvironment();
 
-    Version getVersion();
+    Version getMinecraftVersion();
+    String getVoxelSniperVersion();
 
     VoxelSniperConfiguration getVoxelSniperConfiguration();
 

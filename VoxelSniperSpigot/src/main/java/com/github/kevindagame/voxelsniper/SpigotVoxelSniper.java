@@ -152,10 +152,15 @@ public class SpigotVoxelSniper extends JavaPlugin implements IVoxelsniper, Liste
     }
 
     @Override
-    public Version getVersion() {
+    public Version getMinecraftVersion() {
         //todo: Does this work?
         String version = "V" + Bukkit.getBukkitVersion().substring(0, 4).replace('.', '_');
         return Version.valueOf(version);
+    }
+
+    @Override
+    public String getVoxelSniperVersion() {
+        return getDescription().getVersion();
     }
 
     /**

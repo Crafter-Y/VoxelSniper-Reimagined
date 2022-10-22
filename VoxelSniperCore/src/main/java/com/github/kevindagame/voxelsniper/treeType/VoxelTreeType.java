@@ -105,6 +105,6 @@ public enum VoxelTreeType {
     }
 
     public boolean isSupported() {
-        return VoxelSniper.voxelsniper.getVersion().isSupported(this.version);
+        return VoxelSniper.voxelsniper.getMinecraftVersion().isSupported(this.version);
     }
 }

@@ -98,7 +98,7 @@ public record VoxelBiome(String namespace, String key, Version version) {
 
     public static VoxelBiome getBiome(String namespace, String key) {
         var biome = BIOMES.get(namespace + ":" + key);
-        if (VoxelSniper.voxelsniper.getVersion().isSupported(biome.getVersion())) {
+        if (VoxelSniper.voxelsniper.getMinecraftVersion().isSupported(biome.getVersion())) {
             return biome;
         }
         return null;

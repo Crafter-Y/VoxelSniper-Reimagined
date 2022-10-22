@@ -152,7 +152,7 @@ public record VoxelEntityType(String namespace, String key, Version version) {
 
     public static VoxelEntityType getEntityType(String namespace, String key) {
         var entityType = ENTITYTYPES.get(namespace + ":" + key);
-        if (VoxelSniper.voxelsniper.getVersion().isSupported(entityType.getVersion())) {
+        if (VoxelSniper.voxelsniper.getMinecraftVersion().isSupported(entityType.getVersion())) {
             return entityType;
         }
         return null;
