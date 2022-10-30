@@ -104,7 +104,7 @@ public record SpigotWorld(World world) implements IWorld {
         BlockPosition bp = new BlockPosition(x, y, z);
         Material mat = ((SpigotMaterial) material.getIMaterial()).material();
         IBlockData ibd = CraftMagicNumbers.getBlock(mat).m();
-        nmsWorld.a(bp, ibd, applyPhysics ? 3 : 2);
+        nmsWorld.a(bp, ibd, applyPhysics ? 2 : 3);
     }
 
     @Override

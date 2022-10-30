@@ -38,7 +38,8 @@ import java.util.logging.Logger;
  * Regex to the rescue, am I right? - Giltwist
  */
 public enum Performer {
-    NMSMaterial(NMSpMaterial.class, "nms", "nmsmaterial"),
+    NMSMaterial(NMSWorldpMaterial.class, "nms", "nmsmaterial"),
+    NMSMaterialChunk(NMSChunkpMaterial.class, "nmsc", "nmsmaterialchunk"),
     MATERIAL(pMaterial.class, "m", "material"),
     MATERIAL_NOPHYS(pMaterialNoPhysics.class, "mp", "mat-nophys"),
     MAT_MAT(pMatMat.class, "mm", "mat-mat"),

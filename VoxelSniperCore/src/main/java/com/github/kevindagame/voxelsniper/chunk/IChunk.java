@@ -2,6 +2,7 @@ package com.github.kevindagame.voxelsniper.chunk;
 
 import com.github.kevindagame.voxelsniper.block.IBlock;
 import com.github.kevindagame.voxelsniper.entity.IEntity;
+import com.github.kevindagame.voxelsniper.material.VoxelMaterial;
 import com.github.kevindagame.voxelsniper.world.IWorld;
 
 public interface IChunk {
@@ -16,4 +17,6 @@ public interface IChunk {
     }
 
     Iterable<? extends IEntity> getEntities();
+
+    void setBlockInNativeChunk(int x, int y, int z, VoxelMaterial material, boolean applyPhysics);
 }

@@ -12,11 +12,11 @@ import com.github.kevindagame.voxelsniper.material.VoxelMaterial;
 /**
  * @author Voxel
  */
-public class NMSpMaterial extends vPerformer {
+public class NMSWorldpMaterial extends vPerformer {
 
     private VoxelMaterial voxelMaterial;
 
-    public NMSpMaterial() {
+    public NMSWorldpMaterial() {
         name = "NMSMaterial";
     }
 

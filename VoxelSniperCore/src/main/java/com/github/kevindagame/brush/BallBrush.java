@@ -5,6 +5,7 @@ import com.github.kevindagame.snipe.SnipeData;
 import com.github.kevindagame.util.Messages;
 import com.github.kevindagame.util.VoxelMessage;
 import com.github.kevindagame.voxelsniper.block.IBlock;
+import com.github.kevindagame.voxelsniper.location.VoxelLocation;
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
@@ -30,6 +31,17 @@ public class BallBrush extends PerformerBrush {
         var positions = this.sphere(targetBlock.getLocation(), brushSize, this.smoothSphere);
         positions.forEach(position -> this.currentPerformer.perform(position.getBlock()));
         v.owner().storeUndo(this.currentPerformer.getUndo());
+        var minX = targetBlock.getX() - brushSize;
+        var minZ = targetBlock.getZ() - brushSize;
+        var maxX = targetBlock.getX() + brushSize;
+        var maxZ = targetBlock.getZ() + brushSize;
+        var minChunk = new VoxelLocation(this.getWorld(), minX, 0, minZ).getChunk();
+        var maxChunk = new VoxelLocation(this.getWorld(), maxX, 255, maxZ).getChunk();
+        for (int x = minChunk.getX(); x <= maxChunk.getX(); x++) {
+            for (int z = minChunk.getZ(); z <= maxChunk.getZ(); z++) {
+                this.getWorld().refreshChunk(x, z);
+            }
+        }
 
         v.sendMessage("brush took " + (System.currentTimeMillis() - time) + "ms");
     }
