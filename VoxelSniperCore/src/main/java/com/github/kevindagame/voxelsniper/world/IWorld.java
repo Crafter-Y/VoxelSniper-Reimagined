@@ -7,6 +7,7 @@ import com.github.kevindagame.voxelsniper.chunk.IChunk;
 import com.github.kevindagame.voxelsniper.entity.IEntity;
 import com.github.kevindagame.voxelsniper.entity.entitytype.VoxelEntityType;
 import com.github.kevindagame.voxelsniper.location.VoxelLocation;
+import com.github.kevindagame.voxelsniper.material.VoxelMaterial;
 import com.github.kevindagame.voxelsniper.treeType.VoxelTreeType;
 import com.github.kevindagame.voxelsniper.vector.VoxelVector;
 
@@ -65,6 +66,8 @@ public interface IWorld {
     void setBiome(int x, int y, int z, VoxelBiome selectedBiome);
 
     int getHighestBlockYAt(int x, int z);
+
+    void setBlockInNativeWorld(int x, int y, int z, VoxelMaterial material, boolean applyPhysics);
 
     void regenerateChunk(int x, int z);
 

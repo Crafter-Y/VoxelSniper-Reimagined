@@ -25,10 +25,13 @@ public class BallBrush extends PerformerBrush {
     }
 
     private void ball(final SnipeData v, IBlock targetBlock) {
+        var time = System.currentTimeMillis();
         final int brushSize = v.getBrushSize();
         var positions = this.sphere(targetBlock.getLocation(), brushSize, this.smoothSphere);
         positions.forEach(position -> this.currentPerformer.perform(position.getBlock()));
         v.owner().storeUndo(this.currentPerformer.getUndo());
+
+        v.sendMessage("brush took " + (System.currentTimeMillis() - time) + "ms");
     }
 
 

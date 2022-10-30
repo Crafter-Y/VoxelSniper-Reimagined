@@ -11,11 +11,18 @@ import com.github.kevindagame.voxelsniper.entity.IEntity;
 import com.github.kevindagame.voxelsniper.entity.entitytype.VoxelEntityType;
 import com.github.kevindagame.voxelsniper.location.SpigotLocation;
 import com.github.kevindagame.voxelsniper.location.VoxelLocation;
+import com.github.kevindagame.voxelsniper.material.SpigotMaterial;
+import com.github.kevindagame.voxelsniper.material.VoxelMaterial;
 import com.github.kevindagame.voxelsniper.treeType.VoxelTreeType;
 import com.github.kevindagame.voxelsniper.vector.VoxelVector;
+import net.minecraft.core.BlockPosition;
+import net.minecraft.world.level.block.state.IBlockData;
+import org.bukkit.Material;
 import org.bukkit.TreeType;
 import org.bukkit.World;
 import org.bukkit.block.Biome;
+import org.bukkit.craftbukkit.v1_19_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_19_R1.util.CraftMagicNumbers;
 import org.bukkit.entity.EntityType;
 import org.bukkit.util.BlockIterator;
 import org.bukkit.util.Vector;
@@ -89,6 +96,15 @@ public record SpigotWorld(World world) implements IWorld {
     @Override
     public int getHighestBlockYAt(int x, int z) {
         return world.getHighestBlockYAt(x, z);
+    }
+
+    @Override
+    public void setBlockInNativeWorld(int x, int y, int z, VoxelMaterial material, boolean applyPhysics) {
+        var nmsWorld = ((CraftWorld) this.world).getHandle();
+        BlockPosition bp = new BlockPosition(x, y, z);
+        Material mat = ((SpigotMaterial) material.getIMaterial()).material();
+        IBlockData ibd = CraftMagicNumbers.getBlock(mat).m();
+        nmsWorld.a(bp, ibd, applyPhysics ? 3 : 2);
     }
 
     @Override
