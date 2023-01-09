@@ -16,7 +16,7 @@ public class VoxelInkCommand extends VoxelCommand {
 
     public VoxelInkCommand() {
         super("VoxelInk");
-        setIdentifier("vi");
+        setIdentifier("voxelink");
         setPermission("voxelsniper.sniper");
     }
 

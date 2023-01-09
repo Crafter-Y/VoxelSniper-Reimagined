@@ -13,8 +13,8 @@ public class VoxelUndoCommand extends VoxelCommand {
 
     public VoxelUndoCommand() {
         super("VoxelUndo");
-        setIdentifier("u");
-        addOtherIdentifiers("uu");
+        setIdentifier("voxelundo");
+        addOtherIdentifiers("voxeluu");
         setPermission("voxelsniper.sniper");
     }
 
@@ -25,7 +25,7 @@ public class VoxelUndoCommand extends VoxelCommand {
 
         if ((args.length == 1 && (args[0].equalsIgnoreCase("help") || args[0].equalsIgnoreCase("info"))) || args.length > 2) {
             sniper.sendMessage(Messages.VOXEL_UNDO_COMMAND_USAGE_START.replace("%alias%", getActiveAlias()).replace("%name%", getName()));
-            if (getActiveIdentifier().equalsIgnoreCase("u")) {
+            if (getActiveIdentifier().equalsIgnoreCase("voxelundo")) {
                 sniper.sendMessage(Messages.VOXEL_UNDO_COMMAND_USAGE_UNDO.replace("%alias%", getActiveAlias()).replace("%name%", getName()));
             }
             sniper.sendMessage(Messages.VOXEL_UNDO_COMMAND_USAGE_END.replace("%alias%", getActiveAlias()).replace("%name%", getName()));
@@ -33,13 +33,13 @@ public class VoxelUndoCommand extends VoxelCommand {
         }
 
         // Command: /u      <- Undo the latest changes for yourself.
-        if (args.length == 0 && getActiveIdentifier().equalsIgnoreCase("u")) {
+        if (args.length == 0 && getActiveIdentifier().equalsIgnoreCase("voxelundo")) {
             sniper.undo();
             return true;
         }
 
         // Command: /u [amount]         <- Undo the previous [amount] changes for yourself.
-        if (args.length == 1 && getActiveIdentifier().equalsIgnoreCase("u")) {
+        if (args.length == 1 && getActiveIdentifier().equalsIgnoreCase("voxelundo")) {
             try {
                 sniper.undo(Integer.parseInt(args[0]));
                 return true;

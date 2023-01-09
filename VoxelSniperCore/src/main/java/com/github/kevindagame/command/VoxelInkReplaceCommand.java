@@ -16,7 +16,7 @@ public class VoxelInkReplaceCommand extends VoxelCommand {
 
     public VoxelInkReplaceCommand() {
         super("VoxelInkReplace");
-        setIdentifier("vir");
+        setIdentifier("voxelinkreplace");
         setPermission("voxelsniper.sniper");
     }
 

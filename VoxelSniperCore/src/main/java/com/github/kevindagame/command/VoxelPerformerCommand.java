@@ -17,7 +17,7 @@ public class VoxelPerformerCommand extends VoxelCommand {
 
     public VoxelPerformerCommand() {
         super("VoxelPerformer");
-        setIdentifier("p");
+        setIdentifier("voxelperformer");
         setPermission("voxelsniper.sniper");
     }
 

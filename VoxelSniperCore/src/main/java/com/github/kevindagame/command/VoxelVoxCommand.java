@@ -16,7 +16,7 @@ public class VoxelVoxCommand extends VoxelCommand {
 
     public VoxelVoxCommand() {
         super("Vox Utility");
-        setIdentifier("vox");
+        setIdentifier("voxelvox");
         setPermission("voxelsniper.sniper");
     }
 
@@ -123,7 +123,7 @@ public class VoxelVoxCommand extends VoxelCommand {
             }
         }
 
-        if (getActiveIdentifier().equalsIgnoreCase("vox")) {
+        if (getActiveIdentifier().equalsIgnoreCase("voxelvox")) {
             if (args.length == 1) {
                 return Lists.newArrayList("goto", "painting", "chunk");
             }

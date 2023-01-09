@@ -17,7 +17,7 @@ public class VoxelBrushToolCommand extends VoxelCommand {
     // TODO: Config file saving of custom brush tools
     public VoxelBrushToolCommand() {
         super("Voxel Brush Tool");
-        setIdentifier("btool");
+        setIdentifier("voxelbtool");
         setPermission("voxelsniper.sniper");
     }
 

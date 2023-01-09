@@ -19,7 +19,7 @@ public class VoxelVariablesCommand extends MaterialCommand {
 
     public VoxelVariablesCommand() {
         super("Voxel Variables");
-        setIdentifier("vv");
+        setIdentifier("voxelvariables");
         setPermission("voxelsniper.sniper");
     }
 

@@ -1,6 +1,11 @@
 
 VoxelSniper Reimagined
 ============
+This is a fork of the original [VoxelSniper Reimagined](https://github.com/KevinDaGame/VoxelSniper-Reimagined) by KevinDaGame. This fork makes it better to use on production servers. It removes/changes command names and aliases or the messages players receive, when they join the server. This is for personal use, but feel free to use it.
+
+Orginal Readme:
+# VoxelSniper Reimagined
+
 The premier long-distance brush editor for [Bukkit](https://bukkit.org/), [Spigot](https://www.spigotmc.org/), [Paper](https://papermc.io/), and most Bukkit-based server distributions. 
 
 Discord 

@@ -22,7 +22,7 @@ public class VoxelBrushCommand extends VoxelCommand {
 
     public VoxelBrushCommand() {
         super("VoxelBrush");
-        setIdentifier("b");
+        setIdentifier("voxelbrush");
         setPermission("voxelsniper.sniper");
     }
 

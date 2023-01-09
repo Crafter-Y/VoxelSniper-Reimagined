@@ -7,64 +7,57 @@ authors: [ przerwap, MikeMatrix, Gavjenks, giltwist, psanker, Deamon5550, Divine
 description: The premier long-distance brush editor for Minecraft, reimagined!
 softdepend: [ WorldGuard, PlotSquared ]
 commands:
-  u:
+  voxelundo:
     description: Undo changes made by yourself or other players.
     permission: voxelsniper.sniper
-    aliases: [ undo ]
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  uu:
+  voxeluu:
     description: Undo changes made by other players.
     permission: voxelsniper.sniper
-    aliases: [ undouser ]
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  d:
+  voxeldefault:
     description: Reverts all values back to defaults.
     permission: voxelsniper.sniper
-    alias: [ default ]
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  p:
+  voxelperformer:
     description: Change the currently active performer for the performer brush.
     permission: voxelsniper.sniper
-    aliases: [ perf, performer ]
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  sniper:
+  voxelsniper:
     description: View and change settings related to VoxelSniper.
     permission: voxelsniper.sniper
-    aliases: [ voxelsniper, vs ]
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  vi:
+  voxelink:
     description: Changes the data value of the currently active voxel material.
     permission: voxelsniper.sniper
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  vir:
+  voxelinkreplace:
     description: Changes the data value of the currently active replace material.
     permission: voxelsniper.sniper
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  v:
+  voxel:
     description: Changes the currently active voxel material.
     permission: voxelsniper.sniper
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  vr:
+  voxelreplace:
     description: Changes the currently active replace material.
     permission: voxelsniper.sniper
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  b:
+  voxelbrush:
     description: Brush.
     permission: voxelsniper.sniper
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  btool:
+  voxelbtool:
     description: Command to assign brush tools to custom items.
     permission: voxelsniper.sniper
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  vox:
+  voxelvox:
     description: Multi-purpose command to perform various utility functions.
     permission: voxelsniper.sniper
-    aliases: [ painting, vchunk, goto ]
     usage: Invalid syntax. Use /<command> help to see valid syntax.
-  vv:
+  voxelvariables:
     description: Changes various variables related to voxel brushes.
     permission: voxelsniper.sniper
-    aliases: [ vl, vc, vh, vvariables, vvar, variables ]
     usage: Invalid syntax. Use /<command> help to see valid syntax.
 permissions:
   voxelsniper.*:

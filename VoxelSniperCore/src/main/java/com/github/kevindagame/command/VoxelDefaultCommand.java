@@ -12,7 +12,7 @@ public class VoxelDefaultCommand extends VoxelCommand {
 
     public VoxelDefaultCommand() {
         super("VoxelDefault");
-        setIdentifier("d");
+        setIdentifier("voxeldefault");
         setPermission("voxelsniper.sniper");
     }
 

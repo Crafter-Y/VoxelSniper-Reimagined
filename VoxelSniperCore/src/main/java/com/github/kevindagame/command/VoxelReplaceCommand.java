@@ -14,7 +14,7 @@ public class VoxelReplaceCommand extends MaterialCommand {
 
     public VoxelReplaceCommand() {
         super("VoxelReplace");
-        setIdentifier("vr");
+        setIdentifier("voxelreplace");
         setPermission("voxelsniper.sniper");
     }
 

@@ -15,7 +15,7 @@ public class VoxelVoxelCommand extends MaterialCommand {
 
     public VoxelVoxelCommand() {
         super("VoxelVoxel");
-        setIdentifier("v");
+        setIdentifier("voxel");
         setPermission("voxelsniper.sniper");
     }
 
